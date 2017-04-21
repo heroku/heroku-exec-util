@@ -1,0 +1,29 @@
+{
+  "name": "heroku-exec-util",
+  "description": "Set of helpful Heroku Exec utilities",
+  "version": "6.1.17",
+  "author": "Joe Kutner",
+  "bugs": {
+    "url": "https://github.com/heroku/heroku-exec-util/issues"
+  },
+  "dependencies": {
+    "heroku-cli-util": "^6.0.15",
+    "socksv5": "0.0.6",
+    "ssh2": "0.5.4",
+    "keypair": "1.0.1",
+    "node-forge": "0.6.47",
+    "uuid": "3.0.1",
+    "smooth-progress": "1.0.4"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "homepage": "https://github.com/heroku/heroku-exec-util",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": "heroku/heroku-exec-util"
+}
