@@ -1,7 +1,7 @@
 {
   "name": "heroku-exec-util",
   "description": "Set of helpful Heroku Exec utilities",
-  "version": "6.1.17",
+  "version": "0.1.0",
   "author": "Joe Kutner",
   "bugs": {
     "url": "https://github.com/heroku/heroku-exec-util/issues"
