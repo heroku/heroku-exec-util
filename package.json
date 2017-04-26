@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "heroku-cli-util": "^6.0.15",
+    "co-wait": "0.0.0",
     "keypair": "1.0.1",
     "node-forge": "0.6.47",
     "smooth-progress": "1.0.4",
