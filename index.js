@@ -4,8 +4,7 @@ var ssh = require('./lib/ssh')
 
 exports.createSocksProxy = exec.createSocksProxy
 exports.checkStatus = exec.checkStatus
-exports.initAddon = exec.initAddon
-exports.withAddonInfo = exec.withAddonInfo
+exports.initFeature = exec.initFeature
 exports.updateClientKey = exec.updateClientKey
 
 exports.socksv5 = ssh.socksv5
