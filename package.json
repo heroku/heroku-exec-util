@@ -14,7 +14,6 @@
     "smooth-progress": "1.0.4",
     "socksv5": "git://github.com/heroku/socksv5.git#v0.0.6.1",
     "ssh2": "0.5.5",
-    "ssh2-streams": "0.1.19",
     "uuid": "3.0.1",
     "temp": "0.8.3"
   },
