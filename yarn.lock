@@ -17,6 +17,10 @@
   dependencies:
     ip-address "^5.8.8"
 
+ansi-escapes@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-1.4.0.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
+
 ansi-escapes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.0.0.tgz#ec3e8b4e9f8064fc02c3ac9b65f1c275bda8ef92"
@@ -290,9 +294,9 @@ netrc-parser@^2.0.5:
   dependencies:
     lex "^1.7.9"
 
-node-forge@0.6.47:
-  version "0.6.47"
-  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.6.47.tgz#84a239c1eabfd9bbe3a9b7308d52102fdba1da81"
+node-forge@0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.5.tgz#6c152c345ce11c52f465c2abd957e8639cd674df"
 
 object-assign@^4.0.1:
   version "4.1.1"
@@ -330,29 +334,30 @@ semver@^5.1.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
-smooth-progress@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/smooth-progress/-/smooth-progress-1.0.4.tgz#b1f4302555d802a540e730e9eeadaa66f087b625"
+smooth-progress@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/smooth-progress/-/smooth-progress-1.1.0.tgz#a51d6dbc2b1c4635ac94bf4be89364d5ce91ce32"
   dependencies:
+    ansi-escapes "1.4.0"
     chalk "^1.1.1"
 
 sprintf-js@^1.0.3:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.1.1.tgz#36be78320afe5801f6cea3ee78b6e5aab940ea0c"
 
-ssh2-streams@~0.1.18:
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/ssh2-streams/-/ssh2-streams-0.1.19.tgz#f80ececc2de1a39e1aa64469851ec32bc96b83f9"
+ssh2-streams@~0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/ssh2-streams/-/ssh2-streams-0.2.1.tgz#9c9c9964be60e9644575af328677f64b1e5cbd79"
   dependencies:
     asn1 "~0.2.0"
     semver "^5.1.0"
     streamsearch "~0.1.2"
 
-ssh2@0.5.5:
-  version "0.5.5"
-  resolved "https://registry.yarnpkg.com/ssh2/-/ssh2-0.5.5.tgz#c7781ecd2ece7304a253cf620fab5a5c22bb2235"
+ssh2@0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/ssh2/-/ssh2-0.6.1.tgz#5dde1a7394bb978b1f9c2f014affee2f5493bd40"
   dependencies:
-    ssh2-streams "~0.1.18"
+    ssh2-streams "~0.2.0"
 
 streamsearch@~0.1.2:
   version "0.1.2"
@@ -417,6 +422,6 @@ util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
 
-uuid@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
+uuid@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.2.1.tgz#12c528bb9d58d0b9265d9a2f6f0fe8be17ff1f14"
