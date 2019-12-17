@@ -14,7 +14,7 @@
     "node-forge": "0.7.5",
     "smooth-progress": "1.1.0",
     "ssh2": "0.6.1",
-    "temp": "0.8.3",
+    "temp": "0.9.1",
     "uuid": "3.2.1"
   },
   "engines": {
