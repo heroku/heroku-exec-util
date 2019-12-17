@@ -9,7 +9,7 @@
   "dependencies": {
     "@heroku/socksv5": "^0.0.9",
     "co-wait": "0.0.0",
-    "heroku-cli-util": "^8.0.9",
+    "heroku-cli-util": "^8.0.11",
     "keypair": "1.0.1",
     "node-forge": "0.7.5",
     "smooth-progress": "1.1.0",
