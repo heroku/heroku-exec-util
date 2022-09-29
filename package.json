@@ -1,5 +1,5 @@
 {
-  "name": "heroku-exec-util",
+  "name": "@heroku-cli/heroku-exec-util",
   "description": "Set of helpful Heroku Exec utilities",
   "version": "0.7.5",
   "author": "Joe Kutner",
@@ -10,10 +10,10 @@
     "@heroku/socksv5": "^0.0.9",
     "co-wait": "0.0.0",
     "heroku-cli-util": "^8.0.12",
-    "keypair": "1.0.1",
-    "node-forge": "0.7.5",
+    "keypair": "1.0.4",
+    "node-forge": "1.3.0",
     "smooth-progress": "1.1.0",
-    "ssh2": "0.6.1",
+    "ssh2": "1.4.0",
     "temp": "0.9.1",
     "uuid": "3.4.0"
   },
