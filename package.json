@@ -15,7 +15,7 @@
     "smooth-progress": "1.1.0",
     "ssh2": "1.4.0",
     "temp": "0.9.1",
-    "uuid": "3.2.1"
+    "uuid": "3.4.0"
   },
   "engines": {
     "node": ">= 6.0.0"
