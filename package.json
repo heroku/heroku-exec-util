@@ -1,5 +1,5 @@
 {
-  "name": "heroku-exec-util",
+  "name": "@heroku-cli/heroku-exec-util",
   "description": "Set of helpful Heroku Exec utilities",
   "version": "0.7.5",
   "author": "Joe Kutner",
