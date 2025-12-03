@@ -5,7 +5,7 @@ name: Release on Push
 # This workflow is for PUBLIC repositories that need to use workflows from a PRIVATE repository
 # It uses token-based checkout to access the private npm-release-workflows repository
 #
-# SETUP: Ensure NPM_RELEASE_WORKFLOWS_TOKEN secret is configured in repository settings
+# SETUP: Ensure WORKFLOWS_ACCESS_GITHUB_TOKEN secret is configured in repository settings
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: heroku/npm-release-workflows
-          token: ${{ secrets.NPM_RELEASE_WORKFLOWS_TOKEN }}
+          token: ${{ secrets.WORKFLOWS_ACCESS_GITHUB_TOKEN }}
           path: workflows-repo
           ref: main
 
