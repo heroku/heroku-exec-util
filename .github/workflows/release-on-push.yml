@@ -2,6 +2,11 @@ name: Release on Push
 
 # This workflow creates GitHub releases and updates PR labels after release PRs are merged
 # It triggers on push to branches defined in release-channels.yml (main, beta, alpha, etc.)
+# This workflow is for PUBLIC repositories that need to use workflows from a PRIVATE repository
+# It uses token-based checkout to access the private npm-release-workflows repository
+#
+# SETUP: Ensure WORKFLOWS_ACCESS_GITHUB_TOKEN secret is configured in repository settings
+
 on:
   push:
     branches:
@@ -11,11 +16,23 @@ on:
 
 jobs:
   create-release:
-    uses: heroku/npm-release-workflows/.github/workflows/release-on-push.yml@main
-    with:
-      runs_on: 'pub-hk-ubuntu-24.04-ip'
+    runs-on: pub-hk-ubuntu-24.04-ip
     permissions:
       contents: write
       pull-requests: write
-    secrets: inherit
+    steps:
+      - uses: actions/checkout@v4
 
+      - name: Checkout workflows repository
+        uses: actions/checkout@v4
+        with:
+          repository: heroku/npm-release-workflows
+          token: ${{ secrets.WORKFLOWS_ACCESS_GITHUB_TOKEN }}
+          path: workflows-repo
+          ref: main
+
+      - name: Create GitHub Release
+        uses: ./workflows-repo/.github/actions/release-on-push-create-release
+        with:
+          package_manager: pnpm
+          branch_name: ${{ github.ref_name }}
