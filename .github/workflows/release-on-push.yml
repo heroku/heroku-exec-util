@@ -34,5 +34,5 @@ jobs:
       - name: Create GitHub Release
         uses: ./workflows-repo/.github/actions/release-on-push-create-release-public
         with:
-          package_manager: pnpm
+          package-manager: pnpm
           branch_name: ${{ github.ref_name }}
