@@ -13,26 +13,6 @@ on:
         required: false
         default: false
         type: boolean
-      package_manager:
-        description: 'Package manager to use (npm, yarn, or pnpm)'
-        required: false
-        default: 'yarn'
-        type: string
-      test_command:
-        description: 'Command to run tests. Will be prefixed with package manager automatically. Do NOT include package manager in command. Set to empty string ("") to skip tests.'
-        required: false
-        default: ''
-        type: string
-      lint_command:
-        description: 'Command to run linting. Will be prefixed with package manager automatically. Do NOT include package manager in command. Set to empty string ("") to skip linting.'
-        required: false
-        default: ''
-        type: string
-      build_command:
-        description: 'Command to run build. Will be prefixed with package manager automatically. Do NOT include package manager in command. Set to empty string ("") to skip build step.'
-        required: false
-        default: ''
-        type: string
 
 jobs:
   validate:
@@ -49,11 +29,11 @@ jobs:
           ref: main
 
       - name: Validate and test
-        uses: ./workflows-repo/.github/actions/release-validate
+        uses: ./workflows-repo/.github/actions/release-validate-public
         with:
-          package_manager: ${{ inputs.package_manager }}
-          lint_command: ${{ inputs.lint_command }}
-          test_command: ${{ inputs.test_command }}
+          package_manager: yarn
+          lint_command: ''
+          test_command: ''
 
   release-please-pr:
     needs: validate
@@ -84,9 +64,9 @@ jobs:
 
       - name: Create release PR
         id: release-workflow
-        uses: ./workflows-repo/.github/actions/release-please-pr
+        uses: ./workflows-repo/.github/actions/release-please-pr-public
         with:
-          package_manager: ${{ inputs.package_manager }}
+          package_manager: yarn
           branch_name: ${{ github.ref_name }}
           dry_run: ${{ inputs.dry_run }}
 
@@ -110,10 +90,10 @@ jobs:
           ref: main
 
       - name: Publish to npm
-        uses: ./workflows-repo/.github/actions/release-publish
+        uses: ./workflows-repo/.github/actions/release-publish-public
         with:
-          package_manager: ${{ inputs.package_manager }}
-          build_command: ${{ inputs.build_command }}
+          package_manager: yarn
+          build_command: ''
           dry_run: ${{ inputs.dry_run }}
           npm_tag: ${{ needs.release-please-pr.outputs.npm_tag }}
           package_name: ${{ needs.release-please-pr.outputs.package_name }}
