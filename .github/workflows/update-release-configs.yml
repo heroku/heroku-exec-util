@@ -1,16 +1,13 @@
 name: Update Release Configs
 
-# This workflow is for PUBLIC repositories that need to use workflows from a PRIVATE repository
-# It uses token-based checkout to access the private npm-release-workflows repository
-#
-# SETUP: Ensure WORKFLOWS_ACCESS_GITHUB_TOKEN secret is configured in repository settings
+# Generates release-please config files from release-channels.yml
 
 on:
   workflow_dispatch:
 
 jobs:
   update-configs:
-    runs-on: pub-hk-ubuntu-24.04-ip
+    runs-on: pub-hk-ubuntu-24.04-ip  # Options: ubuntu-latest | sfdc-hk-ubuntu-latest | pub-hk-ubuntu-24.04-ip
     permissions:
       contents: write
       pull-requests: write

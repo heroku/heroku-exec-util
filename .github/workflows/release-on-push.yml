@@ -1,22 +1,17 @@
 name: Release on Push
 
-# This workflow creates GitHub releases and updates PR labels after release PRs are merged
-# It triggers on push to branches defined in release-channels.yml (main, beta, alpha, etc.)
-# This workflow is for PUBLIC repositories that need to use workflows from a PRIVATE repository
-# It uses token-based checkout to access the private npm-release-workflows repository
-#
-# SETUP: Ensure WORKFLOWS_ACCESS_GITHUB_TOKEN secret is configured in repository settings
+# Automatically creates GitHub releases after release PRs are merged
 
 on:
   push:
     branches:
       - main
       - beta
-      - alpha
+      # - alpha  # Uncomment if you have an alpha channel
 
 jobs:
   create-release:
-    runs-on: pub-hk-ubuntu-24.04-ip
+    runs-on: pub-hk-ubuntu-24.04-ip  # Options: ubuntu-latest | sfdc-hk-ubuntu-latest | pub-hk-ubuntu-24.04-ip
     permissions:
       contents: write
       pull-requests: write
@@ -34,5 +29,5 @@ jobs:
       - name: Create GitHub Release
         uses: ./workflows-repo/.github/actions/release-on-push-create-release-public
         with:
-          package-manager: pnpm
+          package-manager: yarn  # npm | yarn | pnpm
           branch_name: ${{ github.ref_name }}
