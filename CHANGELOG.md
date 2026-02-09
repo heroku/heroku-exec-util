@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.5](https://github.com/heroku/heroku-exec-util/compare/heroku-exec-util-v0.9.4...heroku-exec-util-v0.9.5) (2026-02-09)
+
+
+### Miscellaneous Chores
+
+* update pr template ([#71](https://github.com/heroku/heroku-exec-util/issues/71)) ([7d4b45d](https://github.com/heroku/heroku-exec-util/commit/7d4b45d6636f4e070696dd97e44699ab2c48ff38))
+
 ## [0.9.4](https://github.com/heroku/heroku-exec-util/compare/heroku-exec-util-v0.9.3...heroku-exec-util-v0.9.4) (2026-01-29)
 
 
