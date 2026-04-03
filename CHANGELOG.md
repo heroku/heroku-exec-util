@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.5](https://github.com/heroku/heroku-exec-util/compare/heroku-exec-util-v0.9.4...heroku-exec-util-v0.9.5) (2026-04-03)
+
+
+### Bug Fixes
+
+* **deps:** bump minimatch from 3.1.2 to 3.1.5 ([#77](https://github.com/heroku/heroku-exec-util/issues/77)) ([d235f34](https://github.com/heroku/heroku-exec-util/commit/d235f34fabeb43328c1c9b771c7d1d208d7268cd))
+* **deps:** bump node-forge from 1.3.2 to 1.4.0 ([#79](https://github.com/heroku/heroku-exec-util/issues/79)) ([12a5937](https://github.com/heroku/heroku-exec-util/commit/12a5937eacb018b04bd9d006b7f51ffe1a0f9e80))
+
 ## [0.9.4](https://github.com/heroku/heroku-exec-util/compare/heroku-exec-util-v0.9.3...heroku-exec-util-v0.9.4) (2026-01-29)
 
 
