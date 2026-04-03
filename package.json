@@ -7,7 +7,7 @@
     "url": "https://github.com/heroku/heroku-exec-util/issues"
   },
   "dependencies": {
-    "@heroku/heroku-cli-util": "^8.0.13",
+    "@heroku/heroku-cli-util": "^9.2.1",
     "@heroku/socksv5": "^0.0.9",
     "co": "4.6.0",
     "co-wait": "0.0.0",
